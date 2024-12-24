@@ -1,0 +1,6 @@
+Flask==2.2.2
+matplotlib==3.7.1
+pandas==1.5.3
+requests==2.31.0
+google-api-python-client==2.90.0
+SymSpellPy==6.7.7
