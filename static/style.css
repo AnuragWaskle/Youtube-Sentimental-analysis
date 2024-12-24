@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d3c4db;
+    background-image: url('purple.png');
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center;  /* Centers the image in the background */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bob {
+    color: white;
+    text-shadow: 2px 2px 5px black, -2px -2px 5px black, 2px -2px 5px black, -2px 2px 5px black;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Scroll when comments exceed div height */
+    height: 400px; /* Adjust as needed */
+}
+
+/* Results Container */
+.results-container {
+    display: grid;
+    gap: 10px;
+}
+
+/* Comment Styles */
+.results-container .comment {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; /* Ensure the sentiment label below is properly placed */
+}
+
+/* Comment Hover Effect */
+.results-container .comment:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sentiment Label Styles Inside the Comment */
+.comment .sentiment-label {
+    margin-top: 10px; /* Added space between the comment and sentiment */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Sentiment Color Based on Sentiment Type */
+.sentiment-positive {
+    color: green;
+}
+
+.sentiment-neutral {
+    color: orange;
+}
+
+.sentiment-negative {
+    color: red;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Summary & Chart Styles */
+.summary, .chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styling for Processing Speed */
+.speed {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Sentiment Label Styles */
+.sentiment-label {
+    margin-top: 10px; /* Added space between the comment and sentiment */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.sentiment-positive {
+    color: green;
+}
+
+.sentiment-neutral {
+    color: orange;
+}
+
+.sentiment-negative {
+    color: red;
+}
+
+.report{
+    color: white;
+}
+#download-report {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+#download-report:hover {
+    background-color: #218838;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-box input {
+        width: 70%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Comments Sentiment Analysis</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Link to external JS libraries -->
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/symspelljs@6.0.1/symspell.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="bob">
+                <h1>YouTube Comments Sentiment Analysis</h1>
+                <p>Enter a search term to fetch YouTube comments and analyze their sentiments:</p>
+            </div>
+            <div class="search-box">
+                <input type="text" id="query" placeholder="Enter your query here...">
+                <button onclick="fetchComments()">Analyze</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="left-section">
+                <h2>Comments and Sentiments</h2>
+                <div id="results" class="results-container">
+                    <!-- Comments will be dynamically inserted here -->
+                </div>
+            </section>
+            <section class="right-section">
+                <div class="summary">
+                    <h2>Sentiment Summary</h2>
+                    <div id="summary">
+                        <p>Total Positive: <span id="positive-count">0</span></p>
+                        <p>Total Negative: <span id="negative-count">0</span></p>
+                        <p>Total Neutral: <span id="neutral-count">0</span></p>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h2>Chart</h2>
+                    <div id="chart-container">
+                        <!-- Chart will be dynamically inserted here -->
+                    </div>
+                    <p id="accuracy"></p>
+                </div>
+                <div id="speed" class="speed">
+                    <!-- Processing speed will be inserted here -->
+                </div>
+                <div class="report">
+                    <button id="download-report">Download PDF</button>
+
+
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
